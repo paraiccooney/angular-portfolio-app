@@ -1,1 +1,90 @@
-<p>tech-stack works!</p>
+<div class="container-fluid page-container">
+<div class="content-container">
+    
+<div class="row">
+    <div class="col-12 mini-nav">
+        <div class="mini-nav-div">
+        <span *ngFor="let item of subNav">
+            <span (click)="changeView(item.name)" class="mini-nav-item">
+                <span [class.active]="displayed===item.name">
+                    {{ item.name }}
+                </span>
+            </span>
+        </span>
+        
+        </div> 
+    </div>
+</div>
+    
+<div class="row">
+    <div class="col-10 offset-1 content-div">
+        
+        <div [ngSwitch]="displayed">
+            
+        <div *ngSwitchCase="'HTML'">
+        HTML
+        </div>
+        
+        <div *ngSwitchCase="'CSS'">
+        CSS
+        </div>
+        
+        <div *ngSwitchCase="'Bootstrap/Bootwatch'">
+        Bootstrap/Bootwatch
+        </div>
+        
+        <div *ngSwitchCase="'jQuery'">
+        jQuery
+        </div>
+        
+        <div *ngSwitchCase="'JavaScript'">
+        JavaScript
+        </div>
+        
+        <div *ngSwitchCase="'API Interaction'">
+        API Interaction
+        </div>
+        
+        <div *ngSwitchCase="'JSON Representation'">
+        JSON Representation
+        </div>
+        
+        <div *ngSwitchCase="'JSON Representation'">
+        JSON Representation
+        </div>
+        
+        <div *ngSwitchCase="'Python'">
+        Python
+        </div>
+        
+        <div *ngSwitchCase="'Flask'">
+        Flask
+        </div>
+        
+        <div *ngSwitchCase="'Django'">
+        Django
+        </div>
+        
+        <div *ngSwitchCase="'SQL'">
+        SQL
+        </div>
+        
+        <div *ngSwitchCase="'Stripe'">
+        Stripe
+        </div>
+        
+        <div *ngSwitchCase="'MongoDB'">
+        MongoDB
+        </div>
+        
+        <div *ngSwitchDefault> 
+        No information found.
+        </div>
+        
+        </div>
+        
+    </div>
+</div>
+
+</div>
+</div>
