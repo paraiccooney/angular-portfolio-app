@@ -1,0 +1,42 @@
+<div class="container-fluid content-container">
+    <div class="row">
+        <div class="col-3 sidebar-div">
+        
+        <div *ngFor="let item of sidebar">
+            <div (click)="changeView(item.name)" class="side-nav">
+                <p [class.active]="displayed===item.name">
+                    {{ item.name }}
+                </p>
+                
+            
+            </div>
+        </div>
+            
+        </div>
+        <div class="col-9 content-div">
+            
+        <div [ngSwitch]="displayed">
+            
+        <div *ngSwitchCase="'Overview'">
+        Welcome to the portfolio website for Páraic Cooney.  A passionate Full-Stack Developer with experience in the practical application 
+        of a number of programming languages & frameworks.  Above you will find links to a variety of projects detailing this experience.  To the
+        side of this panel you will see further resources.
+        </div>
+        
+        <div *ngSwitchCase="'Projects'"> 
+        Projects include...
+        </div>
+        
+        <div *ngSwitchCase="'Links'"> 
+        Links...
+        </div>
+        
+        <div *ngSwitchDefault> 
+        No information found.
+        </div>
+        
+        </div>
+        
+        </div>
+    </div>
+</div>

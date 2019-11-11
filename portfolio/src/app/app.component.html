@@ -1,0 +1,29 @@
+<nav [hidden]="hidden">
+<ul>
+   <li>
+     <a>Contact & Social</a>
+    </li>
+    <li>
+      <a>Watch this space</a>
+    </li>
+    <li>
+      <a>Python with Django</a>
+    </li>
+    <li>
+      <a>Python with Flask</a>
+    </li>
+    <li>
+      <a>JavaScript</a>
+    </li>
+    <li>
+      <a>HTML & CSS</a>
+    </li>
+    <li>
+      <a>Home</a>
+    </li>
+</ul>
+</nav>
+
+    <router-outlet>
+      <a (click)="hide()" class="more-button" routerLink="/about" [hidden]="!hidden">More</a>
+    </router-outlet>
