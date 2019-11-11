@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { TechStackComponent } from './tech-stack/tech-stack.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    PortfolioComponent,
+    TechStackComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { RouterModule } from '@angular/router';
       {path: "", component: HomeComponent},
       {path: "about", component: AboutComponent},
       {path: "contact", component: ContactComponent},
-      
+      {path: "tech-stack", component: TechStackComponent},
+      {path: "portfolio", component: PortfolioComponent},
       ])
   ],
   providers: [],
