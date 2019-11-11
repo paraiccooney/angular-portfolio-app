@@ -1,1 +1,54 @@
-<p>portfolio works!</p>
+<div class="container-fluid page-container">
+<div class="content-container">
+    
+<div class="row">
+    <div class="col-12 mini-nav">
+        <div class="mini-nav-div">
+        <span *ngFor="let item of subNav">
+            <span (click)="changeView(item.name)" class="mini-nav-item">
+                <span [class.active]="displayed===item.name">
+                    {{ item.name }}
+                </span>
+            </span>
+        </span>
+        
+        </div> 
+    </div>
+</div>
+    
+<div class="row">
+    <div class="col-10 offset-1 content-div">
+        
+        <div [ngSwitch]="displayed">
+            
+        <div *ngSwitchCase="'HTML & CSS'">
+        HTML & CSS Project
+        </div>
+        
+        <div *ngSwitchCase="'JavaScript'">
+        JavaScript Project
+        </div>
+        
+        <div *ngSwitchCase="'Python with Flask'">
+        Python with Flask Project
+        </div>
+        
+        <div *ngSwitchCase="'Python with Django'">
+        Python with Django Project
+        </div>
+        
+        <div *ngSwitchCase="'Angular'">
+        Angular Project
+        </div>
+        
+        <div *ngSwitchDefault> 
+        No information found.
+        </div>
+        
+        </div>
+        
+    </div>
+</div>
+
+</div>
+</div>
