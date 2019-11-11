@@ -5,6 +5,9 @@
         <div *ngFor="let item of sidebar">
             <div (click)="changeView(item.name)" class="side-nav">
                 <p [class.active]="displayed===item.name">
+                    
+                    <i [class.fas]="displayed===item.name" [class.fa-chevron-right]="displayed===item.name">
+                    &nbsp;</i>
                     {{ item.name }}
                 </p>
                 
