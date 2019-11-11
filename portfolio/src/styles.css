@@ -6,20 +6,21 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    height:100%;
-    width:100%;
-}
-
-.lander {
+    background-image: url("https://wallpaperaccess.com/full/639723.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100vw;
-    background-color: #272B30;
+}
+
+.lander, body {
     color:#aaa;
 }
 
 .greeter {
-    position:relative;
+    position:absolute;
     top:40%;
+    left:43%;
 }
 
 
@@ -35,11 +36,9 @@ h2 {
 #app-container {
     height:100vh;
     width: 100vw;
-    background-color: green;
 }
 
 .nav-col {
-    background-color: yellow;
     height:100vh;
 }
 
@@ -65,7 +64,6 @@ li a {
 }
 nav {
   height:10vh;
-  background-color: #272B30;
   color:#aaa;
 }
 
@@ -78,35 +76,42 @@ nav {
 
 /* Component Content Stlying */
 .content-div {
-    height:90vh;
     width:90vw;
-    /* background-color:#272B30; */
-    background: url("https://image.freepik.com/free-photo/dark-grey-black-slate-background-texture_38679-794.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:#aaa;
     text-align:center;
-    padding-top:20%;
+    padding-top:3%;
+    padding-bottom:5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FCF3EB;
 }
 
-.sidebar-div {
-    height:90vh;
+.mini-nav {
+    height:10vh;
     width:90vw;
-    background-color:#272B30;
     color:#aaa;
     text-align:center;
-    padding-top:10%;
+    padding-top:3%;
 }
 
 .content-container {
-  height:90vh;
+  height:80vh;
   width:90vw;
 }
 
-.side-nav {
-  margin-top: 60px;
+.mini-nav-item {
+  cursor:pointer;
+  margin-left: 5px;
 }
 
 .active {
-  text-decoration: underline white;
+  text-decoration: underline;
+  font-weight:bold;
+}
+
+.mini-nav-div {
+  background-color: #FCF3EB;
+}
+
+.hyperlink {
+  text-decoration: none;
+  color: #aaa;
 }

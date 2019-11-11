@@ -1,29 +1,35 @@
-<div class="container-fluid content-container">
-    <div class="row">
-        <div class="col-3 sidebar-div">
-        
-        <div *ngFor="let item of sidebar">
-            <div (click)="changeView(item.name)" class="side-nav">
-                <p [class.active]="displayed===item.name">
-                    
-                    <i [class.fas]="displayed===item.name" [class.fa-chevron-right]="displayed===item.name">
-                    &nbsp;</i>
+<div class="container-fluid page-container">
+<div class="content-container">
+    
+<div class="row">
+    <div class="col-12 mini-nav">
+        <div class="mini-nav-div">
+        <span *ngFor="let item of subNav">
+            <span (click)="changeView(item.name)" class="mini-nav-item">
+                <span [class.active]="displayed===item.name">
                     {{ item.name }}
-                </p>
-                
-            
-            </div>
-        </div>
-            
-        </div>
-        <div class="col-9 content-div">
-            
+                </span>
+            </span>
+        </span>
+        
+        </div> 
+    </div>
+</div>
+    
+<div class="row">
+    <div class="col-10 offset-1 content-div">
+        
         <div [ngSwitch]="displayed">
             
         <div *ngSwitchCase="'Overview'">
-        Welcome to the portfolio website for Páraic Cooney.  A passionate Full-Stack Developer with experience in the practical application 
-        of a number of programming languages & frameworks.  Above you will find links to a variety of projects detailing this experience.  To the
-        side of this panel you will see further resources.
+        Welcome to my portfolio website.  This site is a detailed outline of my experience to date & explores both the content covered in my academic & personal studies & also an outline of my personal projects to date.
+        <br>
+        I am a graduate of the <a target="blank" href="https://codeinstitute.net/full-stack-software-development-diploma/" class="hyperlink">
+        Code Institute Full Stack Development course</a> & have also gained experience through my own experimentation & research.
+        I am a passionate developer who is constantly developing my skillset & understanding of all things related to software/web development.
+        <br>
+        If you're looking for a developer or are interesting in collaborating on a project please feel free to 
+        <a routerLink="/contact" class="hyperlink">get in touch</a>.
         </div>
         
         <div *ngSwitchCase="'Projects'"> 
@@ -40,6 +46,8 @@
         
         </div>
         
-        </div>
     </div>
+</div>
+
+</div>
 </div>

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portfolio-site';
   
-  hidden = true
+  hidden = false
   
   hide(){
     this.hidden = false

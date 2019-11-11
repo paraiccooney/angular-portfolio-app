@@ -7,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent {
 
-  sidebar = [
+  subNav = [
     {name: 'Overview'},
-    {name: 'Projects'},
-    {name: 'Links'}
     ]
   
   displayed="Overview"
