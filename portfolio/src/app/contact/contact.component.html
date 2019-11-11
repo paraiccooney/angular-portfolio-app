@@ -1,1 +1,47 @@
-<p>contact works!</p>
+<div class="container-fluid page-container">
+<div class="content-container">
+    
+<div class="row">
+    <div class="col-12 mini-nav">
+        <div class="mini-nav-div">
+        <span *ngFor="let item of subNav">
+            <span (click)="changeView(item.name)" class="mini-nav-item">
+                <span [class.active]="displayed===item.name">
+                    {{ item.name }}
+                </span>
+            </span>
+        </span>
+        
+        </div> 
+    </div>
+</div>
+    
+<div class="row">
+    <div class="col-10 offset-1 content-div">
+        
+        <div [ngSwitch]="displayed">
+            
+        <div *ngSwitchCase="'Contact'">
+        <i class="fas fa-envelope"></i> paraiccooney@hotmail.com
+        <br>
+        <i class="fas fa-phone"></i> 089 247 8762 
+        </div>
+        
+        <div *ngSwitchCase="'Social'"> 
+        <i class="fab fa-github"></i> https://github.com/paraiccooney
+        <br>
+        <i class="fab fa-linkedin"></i> https://www.linkedin.com/in/p%C3%A1raic-cooney-4b481370/
+
+        </div>
+        
+        <div *ngSwitchDefault> 
+        No information found.
+        </div>
+        
+        </div>
+        
+    </div>
+</div>
+
+</div>
+</div>

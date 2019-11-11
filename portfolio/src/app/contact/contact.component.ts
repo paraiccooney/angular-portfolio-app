@@ -6,7 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  
+    subNav = [
+    {name: 'Contact'},
+    {name: 'Social'}
+    ]
+    
+    displayed="Contact"
 
+    changeView(info){
+    this.displayed= info
+    console.log(this.displayed)
+    }
+    
   constructor() { }
 
   ngOnInit() {
