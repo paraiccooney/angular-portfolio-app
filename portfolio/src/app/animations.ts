@@ -24,7 +24,8 @@ export let bounceOutLeftAnimation = animation(
 
 export let slide =
 trigger('slideTrigger', [
-    transition(':enter', [style({transform:'translateX(100%)'}), animate('1000ms')]),
+    transition(':enter', [style({transform:'translateX(100%)'}), animate('500ms')]),
     transition(':leave', useAnimation(bounceOutLeftAnimation))
     ]);
-    
+
+

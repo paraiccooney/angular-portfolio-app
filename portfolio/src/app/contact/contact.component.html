@@ -2,7 +2,7 @@
 <div class="content-container">
     
 <div class="row">
-    <div class="col-12 mini-nav">
+    <div class="col-12 mini-nav" [@enterTrigger]="'fade'">
         <div class="mini-nav-div">
         <span *ngFor="let item of subNav">
             <span (click)="changeView(item.name)" class="mini-nav-item">

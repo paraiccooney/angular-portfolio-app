@@ -18,7 +18,7 @@ export class TechStackComponent implements OnInit {
     {name: 'CSS'},
     {name: 'Bootstrap/Bootwatch'},
     {name: 'jQuery'},
-    {name: 'JavaScript'},
+    {name: 'JS'},
     {name: 'API Interaction'},
     {name: 'JSON Representation'},
     {name: 'Python'},
@@ -27,6 +27,7 @@ export class TechStackComponent implements OnInit {
     {name: 'SQL'},
     {name: 'Stripe'},
     {name: 'MongoDB'},
+    {name: 'Angular'},
     ]
   
   displayed="HTML"
