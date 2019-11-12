@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
     ContactComponent,
     PortfolioComponent,
     TechStackComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
       {path: "contact", component: ContactComponent},
       {path: "tech-stack", component: TechStackComponent},
       {path: "portfolio", component: PortfolioComponent},
+      {path: "**", component: NotFoundComponent},
       ])
   ],
   providers: [],
