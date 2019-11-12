@@ -17,13 +17,13 @@
 </div>
     
 <div class="row">
-    <div class="col-10 offset-1 content-div">
+    <div class="col-10 offset-1 content-div" [@slideTrigger]="'slide'">
         
         <div [ngSwitch]="displayed">
         
         <!-- HTML & CSS -->    
         <div *ngSwitchCase="'HTML & CSS'" [@enterTrigger]="'fade'">
-        
+        HTML & CSS
         </div>
         
         <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">

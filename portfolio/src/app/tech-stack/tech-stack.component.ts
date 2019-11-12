@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, state, animate, style} from '@angular/animations';
-import { fade, slideIn } from './../animations';
+import { fade, slide } from './../animations';
 
 @Component({
   selector: 'app-tech-stack',
@@ -8,7 +8,7 @@ import { fade, slideIn } from './../animations';
   styleUrls: ['./tech-stack.component.css'],
   animations: [
     fade,
-    slideIn
+    slide
   ]
 })
 export class TechStackComponent implements OnInit {

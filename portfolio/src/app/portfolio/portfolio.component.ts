@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, slideIn } from './../animations';
+import { fade, slide } from './../animations';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,7 +7,7 @@ import { fade, slideIn } from './../animations';
   styleUrls: ['./portfolio.component.css'],
   animations: [
     fade,
-    slideIn
+    slide
     ]
 })
 export class PortfolioComponent implements OnInit {
