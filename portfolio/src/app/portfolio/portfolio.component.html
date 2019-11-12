@@ -20,28 +20,29 @@
     <div class="col-10 offset-1 content-div">
         
         <div [ngSwitch]="displayed">
-            
-        <div *ngSwitchCase="'HTML & CSS'">
-        HTML & CSS Project
+        
+        <!-- HTML & CSS -->    
+        <div *ngSwitchCase="'HTML & CSS'" [@enterTrigger]="'fade'">
+        
         </div>
         
-        <div *ngSwitchCase="'JavaScript'">
+        <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
         JavaScript Project
         </div>
         
-        <div *ngSwitchCase="'Python with Flask'">
+        <div *ngSwitchCase="'Python with Flask'" [@enterTrigger]="'fade'">
         Python with Flask Project
         </div>
         
-        <div *ngSwitchCase="'Python with Django'">
+        <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
         Python with Django Project
         </div>
         
-        <div *ngSwitchCase="'Angular'">
+        <div *ngSwitchCase="'Angular'" [@enterTrigger]="'fade'">
         Angular Project
         </div>
         
-        <div *ngSwitchDefault> 
+        <div *ngSwitchDefault [@enterTrigger]="'fade'"> 
         No information found.
         </div>
         

@@ -21,7 +21,7 @@
         
         <div [ngSwitch]="displayed">
             
-        <div *ngSwitchCase="'Overview'">
+        <div *ngSwitchCase="'Overview'" [@enterTrigger]="'fade'">
         Welcome to my portfolio website.  This site is a detailed outline of my experience to date & explores both the content covered in my 
         academic & personal studies & also an outline of my personal projects to date.
         <br>
@@ -43,15 +43,7 @@
         <a routerLink="/contact" class="hyperlink">get in touch</a>.
         </div>
         
-        <div *ngSwitchCase="'Projects'"> 
-        Projects include...
-        </div>
-        
-        <div *ngSwitchCase="'Links'"> 
-        Links...
-        </div>
-        
-        <div *ngSwitchDefault> 
+        <div *ngSwitchDefault [@enterTrigger]="'fade'"> 
         No information found.
         </div>
         

@@ -17,11 +17,11 @@
 </div>
     
 <div class="row">
-    <div class="col-10 offset-1 content-div">
+    <div class="col-10 offset-1 content-div" [@slideTrigger]="'slideIn'">
         
         <div [ngSwitch]="displayed">
             
-        <div *ngSwitchCase="'HTML'">
+        <div *ngSwitchCase="'HTML'" [@enterTrigger]="'fade'">
         <i class="fab fa-html5 tech-stack-icon"></i>
         <br>
         Hypertext Markup Language - the cornerstone of the internet.  Like many developers my first introduction to hard-coding was with HTML
@@ -30,55 +30,71 @@
         I employ these conventions & am familiar with the latest version of HTML (HTML5) & it's capabilities.
         </div>
         
-        <div *ngSwitchCase="'CSS'">
+        <div *ngSwitchCase="'CSS'" [@enterTrigger]="'fade'">
         <i class="fab fa-css3-alt tech-stack-icon"></i>
+        <br>
+        CSS or cascading style sheets are the styling behind the internet.  They're also responsible for a large number of animations that
+        give the internet & applications their interactivity & intuative feel.  CSS compliments the practicality of HTML.
+        I employ CSS to give my websites & applications enticing & intuative interfaces.  I write my own CSS to do so while also implimenting
+        some useful libraries such as Bootstrap & Hover.css (among others).
         </div>
         
-        <div *ngSwitchCase="'Bootstrap/Bootwatch'">
+        <div *ngSwitchCase="'Bootstrap/Bootwatch'" [@enterTrigger]="'fade'">
         <i class="fab fa-bootstrap tech-stack-icon"></i>
+        <br>
         </div>
         
-        <div *ngSwitchCase="'jQuery'">
+        <div *ngSwitchCase="'jQuery'" [@enterTrigger]="'fade'">
         <i class="fas fa-dollar-sign tech-stack-icon"></i>
+        <br>
         </div>
         
-        <div *ngSwitchCase="'JavaScript'">
+        <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
         <i class="fab fa-js-square tech-stack-icon"></i>
+        <br>
         </div>
         
-        <div *ngSwitchCase="'API Interaction'">
+        <div *ngSwitchCase="'API Interaction'" [@enterTrigger]="'fade'">
         <i class="fas fa-server tech-stack-icon"></i>
+        <br>
         </div>
         
-        <div *ngSwitchCase="'JSON Representation'">
+        <div *ngSwitchCase="'JSON Representation'" [@enterTrigger]="'fade'">
+        <br>
         JSON Representation
         </div>
         
-        <div *ngSwitchCase="'Python'">
+        <div *ngSwitchCase="'Python'" [@enterTrigger]="'fade'">
+        <br>
         <i class="fab fa-python tech-stack-icon"></i>
         </div>
         
-        <div *ngSwitchCase="'Flask'">
+        <div *ngSwitchCase="'Flask'" [@enterTrigger]="'fade'">
+        <br>
         Flask
         </div>
         
-        <div *ngSwitchCase="'Django'">
+        <div *ngSwitchCase="'Django'" [@enterTrigger]="'fade'">
+        <br>
         Django
         </div>
         
-        <div *ngSwitchCase="'SQL'">
+        <div *ngSwitchCase="'SQL'" [@enterTrigger]="'fade'">
+        <br>
         SQL
         </div>
         
-        <div *ngSwitchCase="'Stripe'">
-        <i class="fab fa-stripe tech-stack-icon"></i>
+        <div *ngSwitchCase="'Stripe'" [@enterTrigger]="'fade'">
+        <br>
+        <i class="fab fa-stripe tech-stack-icon" [@enterTrigger]="'fade'"></i>
         </div>
         
-        <div *ngSwitchCase="'MongoDB'">
+        <div *ngSwitchCase="'MongoDB'" [@enterTrigger]="'fade'">
+        <br>
         MongoDB
         </div>
         
-        <div *ngSwitchDefault> 
+        <div *ngSwitchDefault [@enterTrigger]="'fade'"> 
         No information found.
         </div>
         
