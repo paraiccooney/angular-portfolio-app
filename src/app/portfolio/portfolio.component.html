@@ -173,19 +173,26 @@
                 <div *ngSwitchCase="'Features'" [@enterTrigger]="'fade'">
                     <div>
                         <br>
-                        New Game button -The New Game button allows users to reset the current score html element & reset the two score 
+                        <b>New Game button -</b> The New Game button allows users to reset the current score html element & reset the two score 
                         arrays (computer & player). It then allows the user to run the computerGo function which starts the game by 
                         pushing a random value (between 1-4) to the newly clearer computerScore array. This also results in a flash of 
                         the appropriately coloured button by adding & removing a class which alters the background colour of the button.
                         <br><br>
-                        <b>Footer animation -</b> this will provide the user with a pleasant & playful user experience.
+                        <b>Difficulty drop down button -</b> The difficulty drop down button allows the user to alter the speed at which 
+                        the computer iterates through each value in it's score array (the interation is carried out in the computerGo 
+                        function). The difficulty can be updated mid-game & even mid-iteration as the difficulty value is pulled during 
+                        each iteration of the loop in computerGo.
                         <br><br>
-                        <b>Embedded maps -</b> there a a number of maps integrated onto the site to allow the user to immediately view where each bike rental resource is & view the entire route in detail.
-                        <br><br>
-                        <b>Responsive design -</b> The site was designed using a mobile first approach. Both the navbar & informational/functional divs expand on larger screens to utilise the full screen of the user & display information more concisely with a greater proportion of elements being displayed above the fold.
-                        <br><br>
-                        <b>Border timeline -</b> A border timeline has been included & is visible on larger screen sizes on the Places Of Interest page to visually demonstrate to the user that the locations being described are in the order that they will be experienced by the user in real life should they be travelling one direction.
-
+                        <b>Simon buttons -</b> The four coloured buttons (Simon buttons) allow the user to interact with the computer. 
+                        When clicked; 1- A flash is added & removed by adding a css class to the selected button which changes it's 
+                        background colour. The class is then removed after a delay using a setTimeout. 2- The button's value (unique to 
+                        each button) is pushed to the player's score array (playerScore). 3- The buttons value is compared to the 
+                        corresponding value in the computer's score array (computerScore). If not the gameOver function is run & the 
+                        user can no longer interact with the Simon buttons (as gameOver disables the buttons). 4- The current score 
+                        element's html is updated to reflect the number of buttons pressed. 5- If the current score is greater than 
+                        the current score the high score element's html is updated. 6- If the player has pressed the same number of 
+                        buttons as the computer (ie the length of their arrays are equal) computerGo is run which will render the Simon 
+                        buttons temporarily unusable for the user (as computerGo disables the buttons).
                     </div>
                 </div>
                 
@@ -193,26 +200,21 @@
                 <div *ngSwitchCase="'Future Implimentation'" [@enterTrigger]="'fade'">
                     <div>
                         <br>
-                        <b>Contact -</b> when fully connected this allows the user to contact the administrator for more information. 
-                        This will help the administrator to review & determine if additional information/features are to be included 
-                        in future.
-                        <br><br>
-                        <b>Gallery -</b> In future I would like to implement a gallery section where users could upload images which the site 
-                        administrator could then "pin" to the top of the page.
-                        <br><br>
-                        <b>Facilities Page -</b> In future a features page could be implemented to provide additional information. To date this 
-                        information is not available. The features page was included in the original wireframes however all the 
-                        information is not available as of yet (toilets, parking, child/elderly/disable friendly, & water stations) so 
-                        this is currently omitted.
-                        <br><br>
-                        <b>Email.js -</b> prior to launch the contact section will need to be wired up.  To achieve this I plan to use the 
-                        email.js library. 
+                        <b>Hint Button -</b> One potential feature which I may impliment at a later date is the use of a hint button. 
+                        This would be implimented by; 1- Defining a hint variable with a numeric value. This would be the number of 
+                        hints available which I would suggest to be 3. 2- Creation of a html button which, when clicked runs a hint 
+                        function (hint()). 3- The hint function would use the currentGo variable and apply it to the computerScore 
+                        array (computerScore[currentGo]). This would be used to return the value of the button which the player has 
+                        to press next. This returned value would be passed through a number of if/if else statements & a flash returned
+                        based on the value returned (as occurs in the computerGo function). The value in the hint variable (step 1) 
+                        would then be decreased by one to lower the number of remaining hints available. In summary the hint button 
+                        would allow the user to see which button they have to press next. 
                     </div>
                 </div>
                 
                 <!-- Site -->
                 <div *ngSwitchCase="'Site'" [@enterTrigger]="'fade'">
-                    <iframe src="https://paraiccooney.github.io/User-centric-frontend-development-project/"></iframe>
+                    <iframe src="https://paraiccooney.github.io/simon_game/"></iframe>
                 </div>
             </div>
         </div>       
