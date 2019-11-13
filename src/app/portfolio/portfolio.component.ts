@@ -28,17 +28,20 @@ export class PortfolioComponent implements OnInit {
     ]  
   
   displayed="HTML & CSS"
-  
+  portfolioDisplayed = "Overview"
   isActive="yes"
   
   changeView(info){
     this.displayed= info
   }
   
-  portfolioDisplayed = "Overview"
   
   changePortfolioView(info){
     this.portfolioDisplayed= info
+  }
+  
+  revertToOverview(){
+    this.portfolioDisplayed = "Overview"
   }
   
   constructor() { }

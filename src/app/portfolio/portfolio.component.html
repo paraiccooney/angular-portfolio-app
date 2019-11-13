@@ -7,7 +7,7 @@
         <div class="mini-nav-div" [@enterTrigger]="'fade'">
         <span *ngFor="let item of subNav">
             <span (click)="changeView(item.name)" class="mini-nav-item">
-                <span [class.active]="displayed===item.name">
+                <span (click)="revertToOverview()" [class.active]="displayed===item.name">
                     {{ item.name }}
                 </span>
             </span>
@@ -21,7 +21,7 @@
 <div class="row">
     <div class="col-10 offset-1 content-div" [@slideTrigger]="'slide'">
         
-        <div [ngSwitch]="displayed">
+    <div [ngSwitch]="displayed">
         
 <!------------------------------------ HTML & CSS ---------------------------------->    
         <div *ngSwitchCase="'HTML & CSS'" [@enterTrigger]="'fade'">
@@ -65,7 +65,7 @@
                         <br><br>
                         <a target="blank" href="https://github.com/paraiccooney/User-centric-frontend-development-project" class="hyperlink">Repo</a>
                         <br><br>
-                        <a target="blank" href="https://paraiccooney.github.io/User-centric-frontend-development-project/map.html" class="hyperlink">
+                        <a target="blank" href="https://paraiccooney.github.io/User-centric-frontend-development-project/index.html" class="hyperlink">
                         Deployed</a>
         
                     </div>
@@ -116,32 +116,133 @@
                 </div>
             </div>
         </div>       
-            
-<!------------------------------------ END ---------------------------------->            
-        
+        </div>   
         </div>
+<!------------------------------------ END ----------------------------------------->            
+        
+<!-------------------------------- JavaScript -------------------------------------->         
         
         <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
-        JavaScript Project
+        <div class="row">
+        <!-- Sub nav -->
+        <div class="col-2">
+            <br>
+            <div *ngFor="let item of portfolioNav">
+            <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
+                <span [class.active]="portfolioDisplayed===item.name">
+                    {{ item.name }}
+                </span>
+            </div>
+            <br>
+            </div>
         </div>
         
+        <!-- Main content -->
+        <div class="col-10 portfolio-div">
+            <div [ngSwitch]="portfolioDisplayed">
+                
+                <!-- Overview -->
+                <div *ngSwitchCase="'Overview'" [@enterTrigger]="'fade'">
+                    <div>
+                        <div class="row">
+                            <div class="col-12 portfolio-icon-row">
+                        <i class="fab fa-html5 tech-stack-icon"></i><i class="fab fa-css3-alt tech-stack-icon"></i><i class="fab fa-js-square tech-stack-icon"></i>
+                        </div>
+                        </div>
+                        <br>
+                        
+                        <b>Languages</b> - HTML, CSS, JavaScript. <br><br>
+                        <b>Additional technologies</b> - Bootstrap, jQuery, Jasmine <br><br>
+                        
+                        To demonstrate my use of JavaScript logic I developed an in browser version of the 1980s game Simon.  The game
+                        takes place on one webpage & jQuery is used to select elements & update the HTML with new score & roll values.  
+                        Additionally this project makes use of the latest HTML capabilities with the use of the HTML5 audio tag which
+                        is used to improve user experience by adding sound to button clicks.
+                        <br>
+                        This project also makes use of the Jasmine testing library to ensure high quality code.
+                        <br><br>
+                        <a target="blank" href="https://github.com/paraiccooney/simon_game" class="hyperlink">Repo</a>
+                        <br><br>
+                        <a target="blank" href="https://paraiccooney.github.io/simon_game/" class="hyperlink">
+                        Deployed</a>
+        
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div *ngSwitchCase="'Features'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        New Game button -The New Game button allows users to reset the current score html element & reset the two score 
+                        arrays (computer & player). It then allows the user to run the computerGo function which starts the game by 
+                        pushing a random value (between 1-4) to the newly clearer computerScore array. This also results in a flash of 
+                        the appropriately coloured button by adding & removing a class which alters the background colour of the button.
+                        <br><br>
+                        <b>Footer animation -</b> this will provide the user with a pleasant & playful user experience.
+                        <br><br>
+                        <b>Embedded maps -</b> there a a number of maps integrated onto the site to allow the user to immediately view where each bike rental resource is & view the entire route in detail.
+                        <br><br>
+                        <b>Responsive design -</b> The site was designed using a mobile first approach. Both the navbar & informational/functional divs expand on larger screens to utilise the full screen of the user & display information more concisely with a greater proportion of elements being displayed above the fold.
+                        <br><br>
+                        <b>Border timeline -</b> A border timeline has been included & is visible on larger screen sizes on the Places Of Interest page to visually demonstrate to the user that the locations being described are in the order that they will be experienced by the user in real life should they be travelling one direction.
+
+                    </div>
+                </div>
+                
+                <!-- Future Implimentation -->
+                <div *ngSwitchCase="'Future Implimentation'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Contact -</b> when fully connected this allows the user to contact the administrator for more information. 
+                        This will help the administrator to review & determine if additional information/features are to be included 
+                        in future.
+                        <br><br>
+                        <b>Gallery -</b> In future I would like to implement a gallery section where users could upload images which the site 
+                        administrator could then "pin" to the top of the page.
+                        <br><br>
+                        <b>Facilities Page -</b> In future a features page could be implemented to provide additional information. To date this 
+                        information is not available. The features page was included in the original wireframes however all the 
+                        information is not available as of yet (toilets, parking, child/elderly/disable friendly, & water stations) so 
+                        this is currently omitted.
+                        <br><br>
+                        <b>Email.js -</b> prior to launch the contact section will need to be wired up.  To achieve this I plan to use the 
+                        email.js library. 
+                    </div>
+                </div>
+                
+                <!-- Site -->
+                <div *ngSwitchCase="'Site'" [@enterTrigger]="'fade'">
+                    <iframe src="https://paraiccooney.github.io/User-centric-frontend-development-project/"></iframe>
+                </div>
+            </div>
+        </div>       
+        </div>
+        </div>
+<!------------------------------------ END ----------------------------------------> 
+ 
+<!------------------------------- Python with Flask -------------------------------> 
         <div *ngSwitchCase="'Python with Flask'" [@enterTrigger]="'fade'">
         Python with Flask Project
         </div>
-        
+<!------------------------------------ END ----------------------------------------> 
+ 
+<!------------------------------ Python with Django -------------------------------> 
         <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
         Python with Django Project
         </div>
-        
+<!------------------------------------ END ----------------------------------------> 
+
+<!---------------------------------- Angular -------------------------------------->
         <div *ngSwitchCase="'Angular'" [@enterTrigger]="'fade'">
         Angular Project
         </div>
-        
+<!------------------------------------ END ---------------------------------------->
+
         <div *ngSwitchDefault [@enterTrigger]="'fade'"> 
         No information found.
         </div>
         
-        </div>
+        
         
     </div>
 </div>
