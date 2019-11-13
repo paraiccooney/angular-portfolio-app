@@ -20,15 +20,27 @@ export class PortfolioComponent implements OnInit {
     {name: 'Angular'},
     ]
   
+  portfolioNav = [
+    {name: 'Overview'},
+    {name: 'Features'},
+    {name: 'Future Implimentation'},
+    {name: 'Site'},
+    ]  
+  
   displayed="HTML & CSS"
   
   isActive="yes"
   
   changeView(info){
     this.displayed= info
-    console.log(this.displayed)
   }
-
+  
+  portfolioDisplayed = "Overview"
+  
+  changePortfolioView(info){
+    this.portfolioDisplayed= info
+  }
+  
   constructor() { }
 
   ngOnInit() {

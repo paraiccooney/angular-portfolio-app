@@ -20,17 +20,28 @@ body {
 
 .greeter {
     position:absolute;
-    top:40%;
-    left:43%;
+    top:30%;
+    left:40%;
+    font-size: 120%;
+    font-weight: 300;
+    height:40vh;
+    width:40vh;
+    background-color:#fffdd0;
+    border-radius:100%;
 }
-
 
 h2 {
   text-align: center;
 }
 
+.greeter-heading {
+  padding-top:35%;
+  font-size:150%;
+}
+
 .greeter-sub {
   text-align: center;
+  text-decoration: underline;
 }
 
 
@@ -83,9 +94,13 @@ nav {
     padding-top:3%;
     padding-bottom:5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #FCF3EB;
+    background-color: #fffdd0;
     overflow: scroll;
     max-height:78vh;
+}
+
+.portfolio-div {
+  text-align: left;
 }
 
 .mini-nav {
@@ -112,7 +127,7 @@ nav {
 }
 
 .mini-nav-div {
-  background-color: #FCF3EB;
+  background-color: #fffdd0;
 }
 
 .hyperlink {
@@ -131,4 +146,15 @@ nav {
   font-size: 350%;
   margin-top:8px;
   margin-bottom:8px;
+}
+
+.portfolio-icon-row {
+  text-align:center;
+}
+
+iframe {
+  height:60vh;
+  width:70vw;
+  margin-right:5vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
