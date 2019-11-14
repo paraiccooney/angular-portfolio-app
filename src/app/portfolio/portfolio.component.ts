@@ -24,8 +24,14 @@ export class PortfolioComponent implements OnInit {
     {name: 'Overview'},
     {name: 'Features'},
     {name: 'Future Implimentation'},
-    {name: 'Site'},
-    ]  
+    {name: 'Take a look'},
+    ] 
+    
+  angularPortfolioNav = [
+    {name: 'Overview'},
+    {name: 'Features'},
+    {name: 'Future Implimentation'},
+    ]
   
   displayed="HTML & CSS"
   portfolioDisplayed = "Overview"

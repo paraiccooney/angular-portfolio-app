@@ -1,111 +1,180 @@
 <div class="container-fluid page-container no-gutters">
-<div class="content-container">
-    
-<div class="row">
-    <div class="col-12 mini-nav">
-        <div class="mini-nav-div" [@enterTrigger]="'fade'">
-        <span *ngFor="let item of subNav">
+    <div class="content-container">
+
+        <div class="row">
+            <div class="col-12 mini-nav">
+                <div class="mini-nav-div" [@enterTrigger]="'fade'">
+                    <span *ngFor="let item of subNav">
             <span (click)="changeView(item.name)" class="mini-nav-item">
                 <span [class.active]="displayed===item.name">
                     {{ item.name }}
                 </span>
-            </span>
-        </span>
-        
-        </div> 
-    </div>
-</div>
-    
-<div class="row">
-    <div class="col-10 offset-1 content-div" [@slideTrigger]="'slide'">
-        
-        <div [ngSwitch]="displayed">
-            
-        <div *ngSwitchCase="'HTML'" [@enterTrigger]="'fade'">
-        <i class="fab fa-html5 tech-stack-icon"></i>
-        <br>
-        <p>
-        Hypertext Markup Language - the cornerstone of the internet.  Like many developers my first introduction to hard-coding was with HTML
-        & although I have studied many languages & frameworks since I have always managed to keep a solid grounding in the basics.  Good HTML 
-        conventions can make the code a lot more readable not only for the coder who created it but also for other developers & collaborators.  
-        I employ these conventions & am familiar with the latest version of HTML (HTML5) & it's capabilities.
-        </p>
-        </div>
-        
-        <div *ngSwitchCase="'CSS'" [@enterTrigger]="'fade'">
-        <i class="fab fa-css3-alt tech-stack-icon"></i>
-        <br>
-        <p>
-        CSS or cascading style sheets are the styling behind the internet.  They're also responsible for a large number of animations that
-        give the internet & applications their interactivity & intuative feel.  CSS compliments the practicality of HTML.
-        I employ CSS to give my websites & applications enticing & intuative interfaces.  I write my own CSS to do so while also implimenting
-        some useful libraries such as Bootstrap & Hover.css (among others).
-        </p>
-        </div>
-        
-        <div *ngSwitchCase="'Bootstrap/Bootwatch'" [@enterTrigger]="'fade'">
-        <i class="fab fa-bootstrap tech-stack-icon"></i>
-        <br>
-        </div>
-        
-        <div *ngSwitchCase="'jQuery'" [@enterTrigger]="'fade'">
-        <i class="fas fa-dollar-sign tech-stack-icon"></i>
-        <br>
-        </div>
-        
-        <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
-        <i class="fab fa-js-square tech-stack-icon"></i>
-        <br>
-        </div>
-        
-        <div *ngSwitchCase="'API Interaction'" [@enterTrigger]="'fade'">
-        <i class="fas fa-server tech-stack-icon"></i>
-        <br>
-        </div>
-        
-        <div *ngSwitchCase="'JSON Representation'" [@enterTrigger]="'fade'">
-        <br>
-        JSON Representation
-        </div>
-        
-        <div *ngSwitchCase="'Python'" [@enterTrigger]="'fade'">
-        <br>
-        <i class="fab fa-python tech-stack-icon"></i>
-        </div>
-        
-        <div *ngSwitchCase="'Flask'" [@enterTrigger]="'fade'">
-        <br>
-        Flask
-        </div>
-        
-        <div *ngSwitchCase="'Django'" [@enterTrigger]="'fade'">
-        <br>
-        Django
-        </div>
-        
-        <div *ngSwitchCase="'SQL'" [@enterTrigger]="'fade'">
-        <br>
-        SQL
-        </div>
-        
-        <div *ngSwitchCase="'Stripe'" [@enterTrigger]="'fade'">
-        <br>
-        <i class="fab fa-stripe tech-stack-icon" [@enterTrigger]="'fade'"></i>
-        </div>
-        
-        <div *ngSwitchCase="'MongoDB'" [@enterTrigger]="'fade'">
-        <br>
-        MongoDB
-        </div>
-        
-        <div *ngSwitchDefault [@enterTrigger]="'fade'"> 
-        No information found.
-        </div>
-        
-        </div>
-        
-    </div>
-</div>
+                    </span>
+                    </span>
 
-</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10 offset-1 content-div" [@slideTrigger]="'slide'">
+
+                <div [ngSwitch]="displayed">
+
+                    <div *ngSwitchCase="'HTML'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-html5 tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            Hypertext Markup Language - the cornerstone of the internet. Like many developers my first introduction to hard-coding was with HTML & although I have studied many languages & frameworks since I have always managed to keep a solid grounding in the basics.
+                            Good HTML conventions can make the code a lot more readable not only for the coder who created it but also for other developers & collaborators. I employ these conventions & am familiar with the latest version of HTML (HTML5)
+                            & it's capabilities.
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'CSS3'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-css3-alt tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            CSS or cascading style sheets are the styling behind the internet. They're also responsible for a large number of animations that give the internet & applications their interactivity & intuative feel. CSS compliments the practicality of HTML. I employ
+                            CSS to give my websites & applications enticing & intuative interfaces. I write my own CSS to do so while also implimenting some useful libraries such as Bootstrap & Hover.css (among others).
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'Bootstrap'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-bootstrap tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            <a href="https://getbootstrap.com/" target="blank" class="hyperlink">Bootstrap</a> is an open source library built using HTML, CSS , & JavaScript. It contains a range of pre-generated code that includes styling & behaviour.
+                            Bootstrap has enabled me to utilise the power of JavaScript without actually writing any JavaScript. What's more Bootstrap has enabled me to style & structure my sites & applications more efficiently by simply binding Bootstraps
+                            pre-written classes to my elements. One of the most powerful & popular examples of this power is Bootstraps grid system.
+                            <br> A popular extension of Bootstrap is <a target="blank" href="https://bootswatch.com/" class="hyperlink">Bootswatch</a> - a website built using Bootstrap fundamentals but which goes further in providing a number of ready-built
+                            themes. One of these themes (Lux) can be seen in my Python with Django project.
+                            <br> Bootstrap is a very easy to use yet powerful library which I have incorporated into most of my projects.
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'jQuery'" [@enterTrigger]="'fade'">
+                        <i class="fas fa-dollar-sign tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            <a target="blank" href="https://jquery.com/" class="hyperlink">jQuery</a> is a very popular JavaScript library used to increase the ease & efficiency of selecting DOM elements for manipulation. It is lightweight yet powerful
+                            & something I have used in many projects to make my code more readable & efficient.
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-js-square tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            JavaScript is one of the best loved programming languages out there. If HTML is the noun & CSS the adjective of the internet then JavaScript is the verb. JavaScript has powerful logic abilities & I have used this reasoning in many of my projects. JavaScript
+                            also has many supporting libraries & APIs. For example the Stripe payment API can be implemented & interacted with using JavaScript.
+                            <br> It is also worth mentioning TypeScript at this point. TypeScript is a superset of JavaScript meaning that all relevant JavaScript is interpretable using TypeScript. TypeScript builds on top of JavaScript & has a number
+                            of additional functionalities & more concise ways of writing code. TypeScript is something I also utilise in my development & this application has been built using TypeScript.
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'APIs'" [@enterTrigger]="'fade'">
+                        <i class="fas fa-server tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            Application Programming Interfaces or APIs are the interfaces between our devices & servers. They allow us to communicate with the servers & return information to us based on our request. There are many <a target="blank" class="hyperlink"
+                                href="https://github.com/public-apis/public-apis">pre-built, open, & free APIs </a>available which allow us to interact with back-end servers & return information.
+                            <br> I am familiar with these open APIs & have interacted with them from the front-end & seen a number of walkthrough projects throughout my development.
+                            <br> I plan to build an API of my own as a project in future.
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'Python'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-python tech-stack-icon"></i>
+                        <br>
+                        <p>
+                            Python is one of the world's most popular & supported programming languages. Python is a soft-typed language & is known for it's vast array of importable packages that assist users in a wide array of tasks from web-development to machine learning & artificial
+                            intelligence.
+                            <br> I have used Python when developing a number of applications (please see "Python with Flask" & "Python with Django" in the portfolio section) & have found it to be very intuitive & powerful.
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'Flask'" [@enterTrigger]="'fade'">
+                        <br>
+                        <p>
+                            Flask is a lightweight Python microframework used to build dynamic applications. It is lightweight yet powerful. I have employed Flasks capabilities when building my recipe blog application (please see the portfolio section). Flask makes use of the Jinja
+                            templating languages which enabled me to inject logic directly into my html - cutting down on the size of my code & increasing readability. Flask also facilitates routing.
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'Django'" [@enterTrigger]="'fade'">
+                        <br>
+                        <p>
+                            Django is one of the world's most popular Python frameworks. Unlike Flask it is a more complete framework & has much more power under the hood. Django also makes use of routing & Jinja templating logic. However it goes further with many additional functionalities
+                            included built in authorisation, admin panel, & back-end capabilities.
+                            <br> Using Django I developed my Newspaper application complete with dynamic rendering, back-end database, authentication, & authorisation.
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'SQL'" [@enterTrigger]="'fade'">
+                        <br>
+                        <p>
+                            Structure Query Language or SQL is a common programming language used to interact & return information from relational databases. It is the industry standard in many respects.
+                            <br> SQL is something I am familiar with & was exposed to during my Full-Stack course with The Code Institute. I am familiar with running SQL scripts in the command line & also using sql files.
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'Stripe'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-stripe tech-stack-icon" [@enterTrigger]="'fade'"></i>
+                        <br>
+                        <p>
+                            Stripe is a payment technology used to process payments online in a secure manner. It is increasingly popular & used in a range of ecommerce sites.
+                            <br> I have implemented Stripes JavaScript API on my Newspaper application (please see "Python with Django" in the Portfolio section).
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchCase="'MongoDB'" [@enterTrigger]="'fade'">
+                        <br>
+                        <p>
+                            MongoDB is an online database resource which can serve as the back-end of our applications/websites. Mongo structures its database in a similar manner to JSON (JavaScript Object Notation) files making them easy to query & interact with as this is a very
+                            common way of structuring data.
+                            <br> I have used MongoDB to structure & store the data for my Recipe-Blog Application (please see "Django with Flask" in the Portfolio section).
+
+                        </p>
+                    </div>
+
+
+                    <div *ngSwitchCase="'AWS'" [@enterTrigger]="'fade'">
+                        <br>
+                        <p>
+                            Amazon Web Services or AWS refers to an offering of web services by Amazon. Services range to cover a broad array of requirements.
+                            <br> I have used Cloud9 as my IDE (Cloud9 was taken over by AWS in 2019) & have also used their authorisation service (IAM) & S3 services (AWS Buckets) to host data.
+
+                        </p>
+                    </div>
+
+
+                    <div *ngSwitchCase="'Angular'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-angular tech-stack-icon" [@enterTrigger]="'fade'"></i>
+                        <br>
+                        <p>
+                            Angular is a component based front-end framework with a lot of power. Angular was originally written using JavaScript & was referred to as AngularJS, however more recent versions are now written in TypeScript (please refer to the JavaScript section for
+                            more information).
+                            <br> Angular enables developers to write fewer lines of code through templating & the building of reusable components. It also facilitates animations, event listening, & routing.
+                            <br> Angular is a popular method of developing single page applications (such as the one you are presently using) which allow for DOM elements to be destroyed & created without the need to reload/download the entire DOM tree.
+
+                        </p>
+                    </div>
+
+                    <div *ngSwitchDefault [@enterTrigger]="'fade'">
+                        No information found.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </div>

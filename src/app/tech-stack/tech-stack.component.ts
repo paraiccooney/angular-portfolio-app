@@ -15,18 +15,18 @@ export class TechStackComponent implements OnInit {
   
   subNav = [
     {name: 'HTML'},
-    {name: 'CSS'},
-    {name: 'Bootstrap/Bootwatch'},
+    {name: 'CSS3'},
+    {name: 'Bootstrap'},
     {name: 'jQuery'},
-    {name: 'JS'},
-    {name: 'API Interaction'},
-    {name: 'JSON Representation'},
+    {name: 'JavaScript'},
+    {name: 'APIs'},
     {name: 'Python'},
     {name: 'Flask'},
     {name: 'Django'},
     {name: 'SQL'},
     {name: 'Stripe'},
     {name: 'MongoDB'},
+    {name: 'AWS'},
     {name: 'Angular'},
     ]
   

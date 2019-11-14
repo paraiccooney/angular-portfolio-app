@@ -24,6 +24,7 @@
     <div [ngSwitch]="displayed">
         
 <!------------------------------------ HTML & CSS ---------------------------------->    
+        
         <div *ngSwitchCase="'HTML & CSS'" [@enterTrigger]="'fade'">
             
             
@@ -111,7 +112,7 @@
                 </div>
                 
                 <!-- Site -->
-                <div *ngSwitchCase="'Site'" [@enterTrigger]="'fade'">
+                <div *ngSwitchCase="'Take a look'" [@enterTrigger]="'fade'">
                     <iframe src="https://paraiccooney.github.io/User-centric-frontend-development-project/"></iframe>
                 </div>
             </div>
@@ -213,7 +214,7 @@
                 </div>
                 
                 <!-- Site -->
-                <div *ngSwitchCase="'Site'" [@enterTrigger]="'fade'">
+                <div *ngSwitchCase="'Take a look'" [@enterTrigger]="'fade'">
                     <iframe src="https://paraiccooney.github.io/simon_game/"></iframe>
                 </div>
             </div>
@@ -224,19 +225,317 @@
  
 <!------------------------------- Python with Flask -------------------------------> 
         <div *ngSwitchCase="'Python with Flask'" [@enterTrigger]="'fade'">
-        Python with Flask Project
+        <div class="row">
+        <!-- Sub nav -->
+        <div class="col-2">
+            <br>
+            <div *ngFor="let item of portfolioNav">
+            <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
+                <span [class.active]="portfolioDisplayed===item.name">
+                    {{ item.name }}
+                </span>
+            </div>
+            <br>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="col-10 portfolio-div">
+            <div [ngSwitch]="portfolioDisplayed">
+                
+                <!-- Overview -->
+                <div *ngSwitchCase="'Overview'" [@enterTrigger]="'fade'">
+                    <div>
+                        <div class="row">
+                            <div class="col-12 portfolio-icon-row">
+                        <i class="fab fa-html5 tech-stack-icon"></i><i class="fab fa-css3-alt tech-stack-icon"></i><i class="fab fa-python tech-stack-icon"></i>
+                        </div>
+                        </div>
+                        <br>
+                        
+                        <b>Languages</b> - HTML, CSS, JavaScript, Python. <br><br>
+                        <b>Additional technologies</b> - Bootstrap ,Materialize, jQuery, Flask, Jinja2, MongoDB <br><br>
+                        
+                        The Flask framework is a lightweight Python framework which employs the Jinja templating language.  For this 
+                        project I built a recipe database application which allows users to sign in, create/delete entries in the back end,
+                        add/remove bookmaked recipes, & also search recipes by author name or ingredient.
+                        Communication with the back end was achieved through the use of the PyMongo library.
+                        <br><br>
+                        <a target="blank" href="https://github.com/paraiccooney/data-centric-project" class="hyperlink">Repo</a>
+                        <br><br>
+                        <a target="blank" href="https://paraic-cooney-recipe-app.herokuapp.com/" class="hyperlink">
+                        Deployed</a>
+        
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div *ngSwitchCase="'Features'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Recipe Page - </b>The My Recipes page (which can be accessed from the button in the nav of the same name or by 
+                        clicking the application logo in the center of the nav) utilises the jinja templating language to loop through & 
+                        render each recipe written by the user. It does so by passing in all recipes as an argument when rendering the 
+                        url & then, through use of a jinja if statement rendering only those recipes who's author matches that of the 
+                        username entered at the start of the session.  The page then uses the same method to render all recipes which 
+                        the user has bookmarker by checking if the bookmarkers field contains the substring matching the username.
+                        <br><br>
+                        <b>Browse Functionality -</b> The Browse functionality can be accessed via the Browse tab. It displays a number 
+                        of carousels consisting of thumbnail images & recipe names. Upon click the individual recipe is rendered on a 
+                        separate tab. The purpose of this section is to allow the user to browse many recipes visually & by category in
+                        order to quickly process & narrow many recipes (as opposed to a list detailing all recipes or recipes details). 
+                        At the top of the Browse page is the promoted carousel which is to be utilised by the application administrator 
+                        as outlined above in the UX section.
+                        <br><br>
+                        <b>Upload Recipe Functionality -</b> As this application is to be comprised primarily of user generated content
+                        it was imperative that the user be given the ability to upload their own recipes. To achieve this a form has 
+                        been created on the Upload Recipe page. The form was designed to incorporate not only textboxes but also 
+                        checkboxes & a slider to give some variety to the user. The author name field is populated automatically.
+                        <br><br>
+                        <b>Search Functionality -</b> The search feature allows the user to search based on a number of parameters 
+                        (recipe name, ingredients, & author). This feature will become more relevant with a greater number of user 
+                        generated content. The functionality was designed to be as minimalistic as possible.
+                        <br><br>
+                        <b>Bookmark add/remove buttons -</b> The add/remove bookmark feature was implemented to give users the ability 
+                        to save recipes which have been generated by other users.
+                        <br><br>
+                        <b>Delete buttons -</b> The delete feature allows users to delete recipes they themselves authored.
+                    </div>
+                </div>
+                
+                <!-- Future Implimentation -->
+                <div *ngSwitchCase="'Future Implimentation'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Additional search capabilities -</b> In future I would like to impliment the ability to search by additional 
+                        parameters such as difficulty & category. I would also like to include the ability to search by multiple 
+                        criteria & a search function on the My Recipes page to allow the user to search through their own recipes 
+                        (bookmarked & authored). Additionally I would like to remove the case sensitivity of the search by manipulating 
+                        the search input.
+                        <br><br>
+                        <b>Update authored recipes -</b> I would like to grant the user the ability to update their own authored recipes.
+                        <br><br>
+                        <b>Photo upload -</b> I would like to give the user the ability to upload a photo file locally as opposed to a 
+                        photo-url.
+                        <br><br>
+                        <b>User feedback -</b> I would like to impliment either a comment section or ratings system to allow other users
+                        to provide feedback on recipes. Once this is implemented I would then include it as a search parameter.
+                    </div>
+                </div>
+                
+                <!-- Site -->
+                <div *ngSwitchCase="'Take a look'" [@enterTrigger]="'fade'">
+                    <iframe src="https://paraic-cooney-recipe-app.herokuapp.com/"></iframe>
+                </div>
+            </div>
+        </div>       
+        </div>
         </div>
 <!------------------------------------ END ----------------------------------------> 
  
 <!------------------------------ Python with Django -------------------------------> 
-        <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
-        Python with Django Project
+                <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
+        <div class="row">
+        <!-- Sub nav -->
+        <div class="col-2">
+            <br>
+            <div *ngFor="let item of portfolioNav">
+            <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
+                <span [class.active]="portfolioDisplayed===item.name">
+                    {{ item.name }}
+                </span>
+            </div>
+            <br>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="col-10 portfolio-div">
+            <div [ngSwitch]="portfolioDisplayed">
+                
+                <!-- Overview -->
+                <div *ngSwitchCase="'Overview'" [@enterTrigger]="'fade'">
+                    <div>
+                        <div class="row">
+                            <div class="col-12 portfolio-icon-row">
+                        <i class="fab fa-html5 tech-stack-icon"></i><i class="fab fa-css3-alt tech-stack-icon"></i>
+                        <i class="fab fa-python tech-stack-icon"></i><i class="fab fa-stripe tech-stack-icon"></i>
+                        </div>
+                        </div>
+                        <br>
+                        
+                        <b>Languages</b> - HTML, CSS, JavaScript, Python. <br><br>
+                        <b>Additional technologies</b> - Bootswatch/Bootstrap, Materialize, jQuery, Django, Jinja2, Postgres, 
+                        Stripe, S3/IAM (AWS Buckets) <br><br>
+                        
+                        Django is a more heavy-duty Python framework that comes with a lot of capabilities under the hood.  Using Django
+                        I built a newspaper application which rendeds different data depending on whether or not the user is signed-in
+                        & whether or not the signed-in user is an author.  I also utilised the built in Django admin panel to manage 
+                        users & permissions & also delete articles hosted with the back-end.
+                        <br>
+                        Stripe is also incorporated into this application to allow users to donate to the Newspaper.
+                        <br>
+                        The back-end of this application is built using Postgres (a resource which can be added to Heroku where this app
+                        is deployed). The app uses a relational database type (the comment section references it's secondary key against 
+                        the articles primary key). Hosting of static files is achieved using S3/IAM (AWS Buckets).
+                        <br>
+                        Finally automated testing of this application was carried out using Djangos built in TestCase suite.
+                        <br><br>
+                        <a target="blank" href="https://github.com/paraiccooney/full-stack-frameworks-project" class="hyperlink">Repo</a>
+                        <br><br>
+                        <a target="blank" href="https://paraic-fullstack-project.herokuapp.com/" class="hyperlink">
+                        Deployed</a>
+        
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div *ngSwitchCase="'Features'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Registration & Authentication -</b> The application makes use of Djangos build in authentication functionality. As 
+                        can be seen within the Navbar upon entering the site the options to register of log-in are provided. Users are 
+                        also prompted to sign in should they wish to comment or donate. Authentication is used to determine what is 
+                        rendered within the HTML & therefore is used to established what the user can interact with.
+                        <br><br>
+                        <b>Django Groups -</b> As previously mentioned this application makes use of Djangos group functionality. A group has 
+                        been created from within the admin panel named 'journalists'. Registered users are then added to this group 
+                        should the administrator wish them to have the capability to upload articles to be view by other visitors/users 
+                        or the site. Rendering the 'write' option is controlled from within the URL views where it is determined if the 
+                        user is a member of the 'journalists' group. Should this be the case a variable is passed into the rendering 
+                        dictionary with a value or true. Should this not be the case this variable is set to false. Jinja then rendered 
+                        based on this Boolean value.
+                        <br> To avoid a user breaking the site by entering the appropriate URL that allows journalists to write & upload 
+                        an article while not being included in that group the view redirects unless the user is in said group. This can 
+                        be seen at line 71 of articles/views.py & is tested for in the articles/test_views.py file (second test).
+                        <br><br>
+                        <b>Stripe/Payment Functionality -</b> This application makes use of the Stripe API in order to process electronic 
+                        payments. These payments (in the form of donations) are to be used by the administrator to generate revenue. 
+                        The Stripe API connected via the stripe.js file which can be seen from within the static/js folder. The inputs 
+                        passed to Stripe for processing are established using Djangos forms & models (of which some values are obtained 
+                        by passing these forms into the donate.html page) & passed from within the donate/views.py file.
+                        <br><br>
+                        <b>Search Functionality -</b> The application implements search capabilities. This is done from with the search app 
+                        which is then imported into the main project (newspaper). Search input is referenced against headlines, tags 
+                        (which are metadata invisible to readers), & author names. Searches do not have to be an exact match.
+                        <br><br>
+                        <b>Article Views -</b> There are two main views available to the user (excluding the journalists) - the all-articles 
+                        page & the full-article page. By default the landing page which a user will come across will be index.html which
+                        will render all articles present in the database. These are filtered in descending order to allow the most
+                        recent articles to be displayed first. The second view is that which displays fullarticle.html. This view takes
+                        the primary key as an argument in order to render the selected article. This primary key is also passed into the
+                        comments database to return those comments which apply to that particular article. As previously mentioned it is
+                        also possible within the view to submit a comment should the user be logged in.
+                        <br><br>
+                        <b>Journalist Profile/Dashboard -</b> This application provides journalists with a My Profile tab. From this webpage
+                        the journalists are provided with a simple metrics dashboard which is comprised of six metrics - the number of
+                        articles that they have written, the number of views on these articles, & the number of comments on these
+                        articles. These three metrics are then provided for the past week to give the journalists a more recent focus
+                        on their performance.
+                        <br>Within this section it is also possible for journalists to update their articles. This was done to allow 
+                        journalists to upload breaking stories while allowing them the flexibility of updating these as more information 
+                        is to hand. It also allows them to correct any errors without having to reupload the article. Finally it is also
+                        the vision of the app that journalists will be able to perform a/b testing on their articles (adding different
+                        hashtag or keywords into headings) to increase their clickrate & interactivity. A decision was made however to
+                        not allow journalists to remove articles as it is believed that this control should ultimately remain with the
+                        administrator.
+                    </div>
+                </div>
+                
+                <!-- Future Implimentation -->
+                <div *ngSwitchCase="'Future Implimentation'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Pagination -</b> As the site grows & additional articles are uploaded it would not be practical to display all entries on the home page or on the search results page should the search return many results. As a result I would implement pagination using Bootstrap while keeping in line with the Bootswatch 'Lux' theme.
+                        <br><br>
+                        <b>Top articles or custom sort -</b> At present articles are displayed based on their published date. As the database grows I believe it would be beneficial to add functionality to allow users to view articles based on different metrics such as 'most-commented' or 'most-viewed' articles of the past day or week.
+                        
+                        <b>Sub navbar for categories -</b> Currently the application offers search functionality however no categories are present. It would be beneficial to include another navbar below the current navbar which returns articles related to varying topics (Tech, Science, Sport, Weather, Europe, Asia, etc). This could be achieved through targetting the tags journalists currently attached to their articles. Alternatively a categories checkbox input could be included on the 'Write' page.
+                    </div>
+                </div>
+                
+                <!-- Site -->
+                <div *ngSwitchCase="'Take a look'" [@enterTrigger]="'fade'">
+                    <iframe src="https://paraic-fullstack-project.herokuapp.com/articles"></iframe>
+                </div>
+            </div>
+        </div>       
+        </div>
         </div>
 <!------------------------------------ END ----------------------------------------> 
 
 <!---------------------------------- Angular -------------------------------------->
         <div *ngSwitchCase="'Angular'" [@enterTrigger]="'fade'">
-        Angular Project
+        <div class="row">
+        <!-- Sub nav -->
+        <div class="col-2">
+            <br>
+            <div *ngFor="let item of angularPortfolioNav">
+            <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
+                <span [class.active]="portfolioDisplayed===item.name">
+                    {{ item.name }}
+                </span>
+            </div>
+            <br>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="col-10 portfolio-div">
+            <div [ngSwitch]="portfolioDisplayed">
+                
+                <!-- Overview -->
+                <div *ngSwitchCase="'Overview'" [@enterTrigger]="'fade'">
+                    <div>
+                        <div class="row">
+                            <div class="col-12 portfolio-icon-row">
+                        <i class="fab fa-html5 tech-stack-icon"></i><i class="fab fa-css3-alt tech-stack-icon"></i><i class="fab fa-angular tech-stack-icon"></i>
+                        </div>
+                        </div>
+                        <br>
+                        
+                        <b>Languages</b> - HTML, CSS, Typescript. <br><br>
+                        <b>Additional technologies</b> - Bootstrap, Angular <br><br>
+                        
+                        The latest entry in my portfolio is this application you are presently viewing.  The app is a single page application
+                        (SPA) built using Angluar8.  It makes use of Angulars component based approach to render elements & create/remove them
+                        from the DOM (document object model) without reloading the entire page.
+        
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div *ngSwitchCase="'Features'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Animations -</b> This application makes use of Angulars animation modules & defines a number of reusable animations
+                        which can be found throughout the app.
+                        <br><br>
+                        <b>Routing -</b> This app uses Angulars routing modules to render separate components.  This allows the user to create & 
+                        destroy data as it needs to as opposed to downloading & storing the entire application code at one time.  This increases
+                        page load speed & user experience.
+                        <br><br>
+                    </div>
+                </div>
+                
+                <!-- Future Implimentation -->
+                <div *ngSwitchCase="'Future Implimentation'" [@enterTrigger]="'fade'">
+                    <div>
+                        <br>
+                        <b>Email.js -</b>  At present my email address is display in the contact section.  I hope to create an input field
+                        & submit data using the email.js library which will allow users to send emails directly from this app to my email
+                        address.
+                        <br><br>
+                        <b>Additional animations -</b> currently a slide-in animation is applied when some new components are created.  
+                        I hope to create a corresponding slide out animation which will slide the old component off screen before 
+                        deletion.  In order to achieve this I believe I will have to add a listener to the app-router that will 
+                        trigger the animation before the new route is applied.
+                    </div>
+                </div>
+                
+            </div>
+        </div>       
+        </div>
         </div>
 <!------------------------------------ END ---------------------------------------->
 
