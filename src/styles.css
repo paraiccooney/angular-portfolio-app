@@ -6,8 +6,8 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    background-image: url("https://wallpaperaccess.com/full/639723.jpg");
-    background-repeat: no-repeat;
+    background-image: url("https://i.pinimg.com/originals/35/15/72/3515726d068e42346fd8e2a55c7da366.jpg");
+    
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -99,6 +99,8 @@ nav {
     text-align:center;
     padding-top:3%;
     padding-bottom:5%;
+    padding-left:5%;
+    padding-right:5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #fffdd0;
     overflow: scroll;
