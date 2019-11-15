@@ -19,7 +19,7 @@
 
 <!-- CONTENT -->    
 <div class="row">
-    <div class="col-10 offset-1 content-div" [@slideTrigger]="'slide'">
+    <div class="col-10 offset-1 content-div portfolio-content-div" [@slideTrigger]="'slide'">
         
     <div [ngSwitch]="displayed">
         
@@ -30,7 +30,7 @@
             
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2">
+        <div class="col-2 side-nav">
             <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
@@ -126,7 +126,7 @@
         <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2">
+        <div class="col-2 side-nav">
             <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
@@ -227,7 +227,7 @@
         <div *ngSwitchCase="'Python with Flask'" [@enterTrigger]="'fade'">
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2">
+        <div class="col-2 side-nav">
             <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
@@ -337,7 +337,7 @@
                 <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2">
+        <div class="col-2 side-nav">
             <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
@@ -468,7 +468,7 @@
         <div *ngSwitchCase="'Angular'" [@enterTrigger]="'fade'">
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2">
+        <div class="col-2 side-nav">
             <br>
             <div *ngFor="let item of angularPortfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">

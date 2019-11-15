@@ -99,14 +99,21 @@ nav {
     text-align:center;
     padding-top:3%;
     padding-bottom:5%;
-    padding-left:5%;
-    padding-right:5%;
+    padding-right:5%!important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #fffdd0;
     overflow: scroll;
     max-height:78vh;
     font-size: 120%;
     margin-top:3vh;
+}
+
+.portfolio-content-div {
+  padding-left:2%!important;
+}
+
+.main-content-div {
+    padding-left:5%!important;
 }
 
 .portfolio-div {
@@ -131,6 +138,11 @@ nav {
 .mini-nav-item {
   cursor:pointer;
   margin-left: 7px;
+}
+
+.side-nav {
+  padding-top:10%;
+  padding-left:0;
 }
 
 .active {

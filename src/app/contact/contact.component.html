@@ -17,21 +17,26 @@
 </div>
     
 <div class="row">
-    <div class="col-10 offset-1 content-div" [@slideTrigger]="'slide'">
+    <div class="col-10 offset-1 content-div main-content-div" [@slideTrigger]="'slide'">
         
         <div [ngSwitch]="displayed">
             
         <div *ngSwitchCase="'Contact'" [@enterTrigger]="'fade'">
-        <i class="fas fa-envelope"></i> paraiccooney@hotmail.com
         <br>
+        <i class="fas fa-envelope"></i> paraiccooney@hotmail.com
+        <br><br>
         <i class="fas fa-phone"></i> 089 247 8762 
         </div>
         
         <div *ngSwitchCase="'Social'" [@enterTrigger]="'fade'"> 
-        <i class="fab fa-github"></i> https://github.com/paraiccooney
         <br>
+        <a targer="blank" href="https://github.com/paraiccooney" class="hyperlink"><i class="fab fa-github"></i> 
+        https://github.com/paraiccooney 
+        </a>
+        <br><br>
+        <a targer="blank" href="https://www.linkedin.com/in/p%C3%A1raic-cooney-4b481370/" class="hyperlink">
         <i class="fab fa-linkedin"></i> https://www.linkedin.com/in/p%C3%A1raic-cooney-4b481370/
-
+        </a>
         </div>
         
         <div *ngSwitchDefault> 
