@@ -28,7 +28,7 @@ body {
     position:absolute;
     top:30%;
     left:40%;
-    font-size: 120%;
+    font-size: 225%;
     font-weight: 300;
     height:40vh;
     width:40vh;
@@ -36,13 +36,11 @@ body {
     border-radius:100%;
 }
 
-h2 {
-  text-align: center;
-}
 
 .greeter-heading {
   padding-top:35%;
-  font-size:150%;
+  font-size:200%;
+  text-align: center;
 }
 
 .greeter-sub {
