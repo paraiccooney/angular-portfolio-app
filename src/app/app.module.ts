@@ -26,12 +26,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      {path: "", component: HomeComponent},
-      {path: "about", component: AboutComponent},
-      {path: "contact", component: ContactComponent},
-      {path: "tech-stack", component: TechStackComponent},
-      {path: "portfolio", component: PortfolioComponent},
-      {path: "**", component: NotFoundComponent},
+      {path: "", component: HomeComponent, data: {animation: 'Home'}},
+      {path: "about", component: AboutComponent, data: {animation: 'About'}},
+      {path: "contact", component: ContactComponent, data: {animation: 'Contact'}},
+      {path: "tech-stack", component: TechStackComponent, data: {animation: 'Tech-Stack'}},
+      {path: "portfolio", component: PortfolioComponent, data: {animation: 'Portfolio'}},
+      {path: "**", component: NotFoundComponent, data: {animation: 'Not-Found'}},
       ])
   ],
   providers: [],
