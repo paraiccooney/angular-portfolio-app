@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, slide } from './../animations';
+import { fade } from './../animations';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +7,6 @@ import { fade, slide } from './../animations';
   styleUrls: ['./contact.component.css'],
   animations: [
     fade,
-    slide
     ]
 })
 export class ContactComponent implements OnInit {

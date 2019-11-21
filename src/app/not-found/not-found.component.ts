@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, slide } from './../animations';
+import { fade } from './../animations';
 
 @Component({
   selector: 'app-not-found',
@@ -7,7 +7,6 @@ import { fade, slide } from './../animations';
   styleUrls: ['./not-found.component.css'],
   animations: [
     fade,
-    slide
     ]
 })
 export class NotFoundComponent implements OnInit {

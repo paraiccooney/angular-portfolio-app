@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, slide } from './../animations';
+import { fade } from './../animations';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,6 @@ import { fade, slide } from './../animations';
   styleUrls: ['./home.component.css'],
   animations: [
     fade,
-    slide
     ]
 })
 export class HomeComponent implements OnInit {
