@@ -10,5 +10,10 @@ import { slideInAnimation } from './animations';
 })
 export class AppComponent {
   title = 'portfolio-site';
+  
+  navbarOpen = false;
 
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 }
