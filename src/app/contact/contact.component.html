@@ -27,15 +27,17 @@
         <br><br>
         <i class="fas fa-phone"></i> 089 247 8762 
         
+        
         <form class="contact-form" (submit)="sendEmail($event)">
-    <label>Name</label>
-    <input type="text" name="from_name">
-    <label>Email</label>
-    <input type="email" name="from_email">
-    <label>Message</label>
-    <textarea name="message_html"></textarea>
-    <input type="submit" value="Send">
-</form>
+            <label>Name</label>
+            <input type="text" name="from_name">
+            <label>Email</label>
+            <input type="email" name="from_email">
+            <label>Message</label>
+            <textarea name="message_html"></textarea>
+            <input type="submit" value="Send">
+        </form>
+        
         </div>
         
         <div *ngSwitchCase="'Social'" [@enterTrigger]="'fade'"> 
