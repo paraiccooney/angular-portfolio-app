@@ -22,25 +22,37 @@
         <div [ngSwitch]="displayed">
             
         <div *ngSwitchCase="'Contact'" [@enterTrigger]="'fade'">
-        <br>
-        <i class="fas fa-envelope"></i> paraiccooney@hotmail.com
-        <br><br>
-        <i class="fas fa-phone"></i> 089 247 8762 
-        
-        
-        <form class="contact-form" (submit)="sendEmail($event)">
-            <label>Name</label>
-            <input type="text" name="from_name">
-            <label>Email</label>
-            <input type="email" name="from_email">
-            <label>Message</label>
-            <textarea name="message_html"></textarea>
-            <input type="submit" value="Send">
-        </form>
-        
+    
+                <!-- CONTACT FORM -->    
+                <form #f="ngForm" class="contact-form" (submit)="sendEmail($event)" [hidden]="formSubmitted">
+                    <div class="form-group">
+                        <!-- Name Input -->
+                        <label for="from_name">Name</label>
+                        <input ngModel #fromName="ngModel" name="from_name" id="from_name" type="text" class="form-control" required>
+                        <div *ngIf="fromName.touched && !fromName.valid" class="validation-message">Name is required</div>
+                        
+                        <!-- Email Input -->
+                        <label for="from_email">Email</label>
+                        <input ngModel #email="ngModel" name="from_email" id="from_email" type="email" class="form-control" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <div *ngIf="email.touched && !email.valid" class="validation-message">Please provide a valid email address</div>
+                        
+                        <!-- Message Input -->
+                        <label for="message_html">Message</label>
+                        <textarea ngModel #message="ngModel" id="message_html" name="message_html" cols="15" 
+                        rows="5" class="form-control" required></textarea>
+                        <div *ngIf="message.touched && !message.valid" class="validation-message">Please provide a message</div>
+                    </div>
+                    <input type="submit" value="Send" [disabled]="!f.valid" (click)="displayThankYou()">
+                </form>
+                
+                <!-- THANK YOU MESSAGE -->
+                <div class="thankYouMessage" [hidden]="!formSubmitted">Many thanks for getting in touch.  I'll get back to you shortly. 
+                <br><br>- Páraic</div>
+                
         </div>
         
-        <div *ngSwitchCase="'Social'" [@enterTrigger]="'fade'"> 
+        <div *ngSwitchCase="'Social & Contact Info'" [@enterTrigger]="'fade'"> 
         <br>
         <a targer="blank" href="https://github.com/paraiccooney" class="hyperlink"><i class="fab fa-github"></i> 
         https://github.com/paraiccooney 
@@ -49,6 +61,10 @@
         <a targer="blank" href="https://www.linkedin.com/in/p%C3%A1raic-cooney-4b481370/" class="hyperlink">
         <i class="fab fa-linkedin"></i> https://www.linkedin.com/in/p%C3%A1raic-cooney-4b481370/
         </a>
+        <br><br>
+        <i class="fas fa-envelope"></i>:  paraiccooney@hotmail.com
+        <br><br>
+        <i class="fas fa-phone"></i>:  089 247 8762 
         </div>
         
         <div *ngSwitchDefault> 

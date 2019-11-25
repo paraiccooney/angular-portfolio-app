@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path: "", component: HomeComponent, data: {animation: 'Home'}},
       {path: "about", component: AboutComponent, data: {animation: 'About'}},

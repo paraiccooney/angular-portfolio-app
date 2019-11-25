@@ -167,3 +167,12 @@ iframe {
 .links {
   text-decoration: underline;
 }
+
+/* Form Styling */
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid #BF0000;
+}
+
+.validation-message {
+  color: #BF0000;
+}

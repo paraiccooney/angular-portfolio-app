@@ -22,19 +22,26 @@ export class ContactComponent implements OnInit {
       }, (error) => {
         console.log(error.text);
       });
+    
   }
   
   
     subNav = [
     {name: 'Contact'},
-    {name: 'Social'}
+    {name: 'Social & Contact Info'}
     ]
     
     displayed="Contact"
+    formView="Form"
 
     changeView(info){
     this.displayed= info
-    console.log(this.displayed)
+    }
+    
+    formSubmitted = false
+    
+    displayThankYou(){
+      this.formSubmitted = true
     }
     
   constructor() { }
