@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fade } from './../animations';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,19 @@ import { fade } from './../animations';
     ]
 })
 export class ContactComponent implements OnInit {
+  
+    /* Email.js */
+
+    public sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm('outlook', 'template_Y8qO2avO', e.target as HTMLFormElement, 'user_n15rYoKDom1DHseR7h9m0')
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+  
   
     subNav = [
     {name: 'Contact'},
