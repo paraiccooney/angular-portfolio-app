@@ -185,6 +185,12 @@ iframe {
   .greeter {
     left: 12vw;
   }
+  .mobile-mini-nav-tech {
+    margin-bottom: 35px;
+  }
+  .mobile-mini-nav-portfolio {
+    margin-bottom: 30px;
+  }
 }
 /* iPhone 6/7/8 */
 @media only screen and (max-width: 380px) {
@@ -192,6 +198,9 @@ iframe {
     left: 7vw;
   }
 }
+.mobile-mini-nav-tech {
+    margin-bottom: 55px;
+  }
 /* iPhone5 */
 @media only screen and (max-width: 325px) {
   .greeter {
