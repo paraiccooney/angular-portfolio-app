@@ -21,86 +21,6 @@
         
         <div [ngSwitch]="displayed">
             
-        <div *ngSwitchCase="'Contact'" [@enterTrigger]="'fade'">
-    
-                <!-- CONTACT FORM -->    
-                <form #f="ngForm" class="contact-form">
-                    <div class="form-group">
-                        <!-- Name Input -->
-                        <label for="from_name">Name</label>
-                        <input ngModel #fromName="ngModel" name="from_name" id="from_name" type="text" class="form-control" required>
-                        <div *ngIf="fromName.touched && !fromName.valid" class="validation-message">Name is required</div>
-                        
-                        <!-- Email Input -->
-                        <label for="from_email">Email</label>
-                        <input ngModel #email="ngModel" name="from_email" id="from_email" type="email" class="form-control" required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                        <div *ngIf="email.touched && !email.valid" class="validation-message">Please provide a valid email address</div>
-                        
-                        <!-- Message Input -->
-                        <label for="message_html">Message</label>
-                        <textarea ngModel #message="ngModel" id="message_html" name="message_html" cols="15" 
-                        rows="5" class="form-control" required></textarea>
-                        <div *ngIf="message.touched && !message.valid" class="validation-message">Please provide a message</div>
-                    </div>
-                    <input type="submit" value="Send" [disabled]="!f.valid">
-                </form>
-                
-                
-        </div>
-        
-        <div *ngSwitchCase="'Social & Contact Info'" [@enterTrigger]="'fade'"> 
-        <br>
-        <a target="blank" href="https://github.com/paraiccooney" class="hyperlink"><i class="fab fa-github"></i> 
-        https://github.com/paraiccooney 
-        </a>
-        <br><br>
-        <a target="blank" href="www.linkedin.com/in/paraic-cooney" class="hyperlink">
-        <i class="fab fa-linkedin"></i> www.linkedin.com/in/paraic-cooney
-        </a>
-        <br><br>
-        <i class="fas fa-envelope"></i>:  paraiccooney@hotmail.com
-        <br><br>
-        <i class="fas fa-phone"></i>:  089 247 8762 
-        </div>
-        
-        <div *ngSwitchDefault> 
-        No information found.
-        </div>
-        
-        </div>
-        
-    </div>
-</div>
-
-</div>
-</div>
-
-
-<!--
-<div class="container-fluid page-container">
-<div class="content-container">
-    
-<div class="row">
-    <div class="col-12 mini-nav" [@enterTrigger]="'fade'">
-        <div class="mini-nav-div">
-        <span *ngFor="let item of subNav">
-            <span (click)="changeView(item.name)" class="mini-nav-item">
-                <span [class.active]="displayed===item.name">
-                    {{ item.name }}
-                </span>
-            </span>
-        </span>
-        
-        </div> 
-    </div>
-</div>
-    
-<div class="row">
-    <div class="col-10 offset-1 content-div main-content-div">
-        
-        <div [ngSwitch]="displayed">
-            
         <div *ngSwitchCase="'Overview'" [@enterTrigger]="'fade'">
         Welcome & thanks for visiting.  My name is Páraic & I'm a passionate & fully qualified Full-Stack Developer.  This site is designed to give you
         a taste of my experience to date & will talk you through some projects I've worked on in the past & outline the technologies I use in my development.
@@ -146,4 +66,3 @@
 
 </div>
 </div>
--->
