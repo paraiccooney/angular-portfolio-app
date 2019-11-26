@@ -27,11 +27,11 @@ body {
 .greeter {
     position:absolute;
     top:30%;
-    left:40%;
-    font-size: 160%;
+    left:40vw;
+    font-size: 20px;
     font-weight: 300;
-    height:40vh;
-    width:40vh;
+    height:262px;
+    width:262px;
     background-color:#fffdd0;
     border-radius:100%;
 }
@@ -175,4 +175,26 @@ iframe {
 
 .validation-message {
   color: #BF0000;
+}
+
+
+/* Media Rules for greeter div positions on different mobile devices */
+
+/* iPhone 6/7/8 Plus */
+@media only screen and (max-width: 420px) {
+  .greeter {
+    left: 20vw;
+  }
+}
+/* iPhone 6/7/8 */
+@media only screen and (max-width: 380px) {
+  .greeter {
+    left: 16vw;
+  }
+}
+/* iPhone5 */
+@media only screen and (max-width: 325px) {
+  .greeter {
+    left: 10vw;
+  }
 }
