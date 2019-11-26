@@ -27,11 +27,11 @@ body {
 .greeter {
     position:absolute;
     top:30%;
-    left:40vw;
+    left:42vw;
     font-size: 24px;
     font-weight: 300;
-    height:310px;
-    width:310px;
+    height:330px;
+    width:330px;
     background-color:#fffdd0;
     border-radius:100%;
 }
@@ -183,13 +183,13 @@ iframe {
 /* iPhone 6/7/8 Plus */
 @media only screen and (max-width: 420px) {
   .greeter {
-    left: 14vw;
+    left: 12vw;
   }
 }
 /* iPhone 6/7/8 */
 @media only screen and (max-width: 380px) {
   .greeter {
-    left: 10vw;
+    left: 7vw;
   }
 }
 /* iPhone5 */
@@ -199,5 +199,6 @@ iframe {
     font-size: 20px;
     height:262px;
     width:262px;
+    font-size: 0.8rem!important;
   }
 }
