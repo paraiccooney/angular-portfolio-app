@@ -24,7 +24,7 @@
         <div *ngSwitchCase="'Contact'" [@enterTrigger]="'fade'">
     
                 <!-- CONTACT FORM -->    
-                <form #f="ngForm" class="contact-form" (submit)="sendEmail($event)" [hidden]="formSubmitted">
+                <form #f="ngForm" class="contact-form">
                     <div class="form-group">
                         <!-- Name Input -->
                         <label for="from_name">Name</label>
@@ -43,12 +43,9 @@
                         rows="5" class="form-control" required></textarea>
                         <div *ngIf="message.touched && !message.valid" class="validation-message">Please provide a message</div>
                     </div>
-                    <input type="submit" value="Send" [disabled]="!f.valid" (click)="displayThankYou()">
+                    <input type="submit" value="Send" [disabled]="!f.valid">
                 </form>
                 
-                <!-- THANK YOU MESSAGE -->
-                <div class="thankYouMessage" [hidden]="!formSubmitted">Many thanks for getting in touch.  I'll get back to you shortly. 
-                <br><br>- Páraic</div>
                 
         </div>
         
