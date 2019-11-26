@@ -28,10 +28,10 @@ body {
     position:absolute;
     top:30%;
     left:40vw;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
-    height:262px;
-    width:262px;
+    height:310px;
+    width:310px;
     background-color:#fffdd0;
     border-radius:100%;
 }
@@ -196,5 +196,8 @@ iframe {
 @media only screen and (max-width: 325px) {
   .greeter {
     left: 10vw;
+    font-size: 20px;
+    height:262px;
+    width:262px;
   }
 }
