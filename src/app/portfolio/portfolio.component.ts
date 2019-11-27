@@ -11,6 +11,13 @@ import { fade } from './../animations';
 })
 export class PortfolioComponent implements OnInit {
   
+  /* Side-nav control */
+  isExpanded = true;
+  
+  toggleSideNav(){
+    this.isExpanded = !this.isExpanded
+  }
+  
   subNav = [
     {name: 'HTML & CSS'},
     {name: 'JavaScript'},
