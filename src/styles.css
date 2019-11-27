@@ -121,18 +121,6 @@ nav ul li a {
   margin-left: 7px;
 }
 
-.side-nav {
-  padding-top:10%;
-  padding-left:0;
-}
-
-.sidenav {
-  min-height: 100%;
-  width: 160px;
-  overflow-x: hidden;
-  margin-top:15%;
-  margin-left:-2%!important;
-}
 .right-chevron-1 {
   position:relative;
   top:10%;
@@ -222,6 +210,10 @@ iframe {
   }
   .content-div {
     margin-bottom: 6px;
+  }
+  .side-nav {
+    font-size:100%!important;
+    overflow-x: scroll;
   }
 }
 /* iPhone 6/7/8 */
