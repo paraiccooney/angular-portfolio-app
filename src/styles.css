@@ -220,6 +220,9 @@ iframe {
   .chevron-col {
     padding-right:5px!important;
   }
+  iframe {
+    display:hidden;
+  }
 }
 /* iPhone 6/7/8 */
 @media only screen and (max-width: 380px) {
