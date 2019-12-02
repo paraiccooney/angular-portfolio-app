@@ -229,10 +229,11 @@ iframe {
   .greeter {
     left: 7vw;
   }
-}
-.mobile-mini-nav-tech {
+  .mobile-mini-nav-tech {
     margin-bottom: 55px;
   }
+}
+
 /* iPhone5 */
 @media only screen and (max-width: 325px) {
   .greeter {
