@@ -46,17 +46,51 @@
             <div class="right-chevron-1">
             <i class="fas fa-chevron-right"></i>
             </div>
+            <br>
+            <p class="more-1">
+            M    
+            </p>
+            <p class="o-1">
+            O   
+            </p>
+            <p class="r-1">
+            R    
+            </p>
+            <p class="e-1">
+            E    
+            </p>
             <div class="right-chevron-2">
             <i class="fas fa-chevron-right"></i>
             </div>
+            <p class="more-2">
+            M    
+            </p>
+            <p class="o-2">
+            O   
+            </p>
+            <p class="r-2">
+            R    
+            </p>
+            <p class="e-2">
+            E    
+            </p>
             <div class="right-chevron-3">
             <i class="fas fa-chevron-right"></i>
             </div>
+            <p class="more-3">
+            M    
+            </p>
+            <p class="o-3">
+            O   
+            </p>
+            <p class="r-3">
+            R    
+            </p>
+            <p class="e-3">
+            E    
+            </p>
             <div class="right-chevron-4">
             <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="right-chevron-5">
-            <i  class="fas fa-chevron-right"></i>
             </div>
         </div>
         <!-- Main content -->
@@ -142,31 +176,82 @@
         </div>
         </div>
         
-        
-        
-        
         </div>
 <!------------------------------------ END ----------------------------------------->            
-        
-<!-------------------------------- JavaScript -------------------------------------->         
+
+<!----------------------------------- JavaScript ----------------------------------->
         
         <div *ngSwitchCase="'JavaScript'" [@enterTrigger]="'fade'">
+            
+
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2 side-nav">
-            <br>
+        <div class="sidenav col-4" [hidden]="!isExpanded">
+          <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
-                <span [class.active]="portfolioDisplayed===item.name">
+                <span [class.active]="portfolioDisplayed===item.name" (click)="toggleSideNav()">
                     {{ item.name }}
                 </span>
             </div>
             <br>
             </div>
         </div>
-        
+        <!-- Expand chevron -->
+        <div class="col-1 hvr-forward chevron-col" (click)="toggleSideNav()">
+            <div class="right-chevron-1">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <br>
+            <p class="more-1">
+            M    
+            </p>
+            <p class="o-1">
+            O   
+            </p>
+            <p class="r-1">
+            R    
+            </p>
+            <p class="e-1">
+            E    
+            </p>
+            <div class="right-chevron-2">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-2">
+            M    
+            </p>
+            <p class="o-2">
+            O   
+            </p>
+            <p class="r-2">
+            R    
+            </p>
+            <p class="e-2">
+            E    
+            </p>
+            <div class="right-chevron-3">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-3">
+            M    
+            </p>
+            <p class="o-3">
+            O   
+            </p>
+            <p class="r-3">
+            R    
+            </p>
+            <p class="e-3">
+            E    
+            </p>
+            <div class="right-chevron-4">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
         <!-- Main content -->
-        <div class="col-10 portfolio-div">
+        <div [class.col-7]="isExpanded" [class.col-10]="!isExpanded">
+            <div class="portfolio-div">
             <div [ngSwitch]="portfolioDisplayed">
                 
                 <!-- Overview -->
@@ -251,26 +336,82 @@
         </div>       
         </div>
         </div>
-<!------------------------------------ END ----------------------------------------> 
- 
-<!------------------------------- Python with Flask -------------------------------> 
+        </div>
+<!------------------------------------ END ----------------------------------------->   
+
+<!----------------------------------- Python with Flask ---------------------------->
+
         <div *ngSwitchCase="'Python with Flask'" [@enterTrigger]="'fade'">
+            
+
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2 side-nav">
-            <br>
+        <div class="sidenav col-4" [hidden]="!isExpanded">
+          <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
-                <span [class.active]="portfolioDisplayed===item.name">
+                <span [class.active]="portfolioDisplayed===item.name" (click)="toggleSideNav()">
                     {{ item.name }}
                 </span>
             </div>
             <br>
             </div>
         </div>
-        
+        <!-- Expand chevron -->
+        <div class="col-1 hvr-forward chevron-col" (click)="toggleSideNav()">
+            <div class="right-chevron-1">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <br>
+            <p class="more-1">
+            M    
+            </p>
+            <p class="o-1">
+            O   
+            </p>
+            <p class="r-1">
+            R    
+            </p>
+            <p class="e-1">
+            E    
+            </p>
+            <div class="right-chevron-2">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-2">
+            M    
+            </p>
+            <p class="o-2">
+            O   
+            </p>
+            <p class="r-2">
+            R    
+            </p>
+            <p class="e-2">
+            E    
+            </p>
+            <div class="right-chevron-3">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-3">
+            M    
+            </p>
+            <p class="o-3">
+            O   
+            </p>
+            <p class="r-3">
+            R    
+            </p>
+            <p class="e-3">
+            E    
+            </p>
+            <div class="right-chevron-4">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
         <!-- Main content -->
-        <div class="col-10 portfolio-div">
+        <div [class.col-7]="isExpanded" [class.col-10]="!isExpanded">
+            <div class="portfolio-div">
             <div [ngSwitch]="portfolioDisplayed">
                 
                 <!-- Overview -->
@@ -363,26 +504,82 @@
         </div>       
         </div>
         </div>
-<!------------------------------------ END ----------------------------------------> 
- 
-<!------------------------------ Python with Django -------------------------------> 
-                <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
+        </div>
+
+<!------------------------------------ END ----------------------------------------->
+<!------------------------------ Python with Django -------------------------------->
+
+        <div *ngSwitchCase="'Python with Django'" [@enterTrigger]="'fade'">
+            
+
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2 side-nav">
-            <br>
+        <div class="sidenav col-4" [hidden]="!isExpanded">
+          <br>
             <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
-                <span [class.active]="portfolioDisplayed===item.name">
+                <span [class.active]="portfolioDisplayed===item.name" (click)="toggleSideNav()">
                     {{ item.name }}
                 </span>
             </div>
             <br>
             </div>
         </div>
-        
+        <!-- Expand chevron -->
+        <div class="col-1 hvr-forward chevron-col" (click)="toggleSideNav()">
+            <div class="right-chevron-1">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <br>
+            <p class="more-1">
+            M    
+            </p>
+            <p class="o-1">
+            O   
+            </p>
+            <p class="r-1">
+            R    
+            </p>
+            <p class="e-1">
+            E    
+            </p>
+            <div class="right-chevron-2">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-2">
+            M    
+            </p>
+            <p class="o-2">
+            O   
+            </p>
+            <p class="r-2">
+            R    
+            </p>
+            <p class="e-2">
+            E    
+            </p>
+            <div class="right-chevron-3">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-3">
+            M    
+            </p>
+            <p class="o-3">
+            O   
+            </p>
+            <p class="r-3">
+            R    
+            </p>
+            <p class="e-3">
+            E    
+            </p>
+            <div class="right-chevron-4">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
         <!-- Main content -->
-        <div class="col-10 portfolio-div">
+        <div [class.col-7]="isExpanded" [class.col-10]="!isExpanded">
+            <div class="portfolio-div">
             <div [ngSwitch]="portfolioDisplayed">
                 
                 <!-- Overview -->
@@ -496,26 +693,84 @@
         </div>       
         </div>
         </div>
-<!------------------------------------ END ----------------------------------------> 
+        </div>
 
-<!---------------------------------- Angular -------------------------------------->
+<!------------------------------------ END ----------------------------------------->
+
+<!---------------------------------- Angular --------------------------------------->
+
         <div *ngSwitchCase="'Angular'" [@enterTrigger]="'fade'">
+            
+
         <div class="row">
         <!-- Sub nav -->
-        <div class="col-2 side-nav">
-            <br>
-            <div *ngFor="let item of angularPortfolioNav">
+        <div class="sidenav col-4" [hidden]="!isExpanded">
+          <br>
+            <div *ngFor="let item of portfolioNav">
             <div (click)="changePortfolioView(item.name)" class="mini-nav-item">
-                <span [class.active]="portfolioDisplayed===item.name">
+                <span [class.active]="portfolioDisplayed===item.name" (click)="toggleSideNav()">
                     {{ item.name }}
                 </span>
             </div>
             <br>
             </div>
         </div>
-        
+        <!-- Expand chevron -->
+        <div class="col-1 hvr-forward chevron-col" (click)="toggleSideNav()">
+            <div class="right-chevron-1">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <br>
+            <p class="more-1">
+            M    
+            </p>
+            <p class="o-1">
+            O   
+            </p>
+            <p class="r-1">
+            R    
+            </p>
+            <p class="e-1">
+            E    
+            </p>
+            <div class="right-chevron-2">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-2">
+            M    
+            </p>
+            <p class="o-2">
+            O   
+            </p>
+            <p class="r-2">
+            R    
+            </p>
+            <p class="e-2">
+            E    
+            </p>
+            <div class="right-chevron-3">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <p class="more-3">
+            M    
+            </p>
+            <p class="o-3">
+            O   
+            </p>
+            <p class="r-3">
+            R    
+            </p>
+            <p class="e-3">
+            E    
+            </p>
+            <div class="right-chevron-4">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+
+        </div>
         <!-- Main content -->
-        <div class="col-10 portfolio-div">
+        <div [class.col-7]="isExpanded" [class.col-10]="!isExpanded">
+            <div class="portfolio-div">
             <div [ngSwitch]="portfolioDisplayed">
                 
                 <!-- Overview -->
@@ -571,7 +826,10 @@
         </div>       
         </div>
         </div>
-<!------------------------------------ END ---------------------------------------->
+        </div>
+
+<!------------------------------------ END ----------------------------------------->
+
 
         <div *ngSwitchDefault [@enterTrigger]="'fade'"> 
         No information found.

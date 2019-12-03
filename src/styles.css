@@ -115,7 +115,7 @@ nav ul li a {
 }
 
 /* Side-nav / Zippy Styling */
-
+/* m-1, m-2, etc is already declared by bootstrap  */
 .mini-nav-item {
   cursor:pointer;
   margin-left: 7px;
@@ -125,22 +125,69 @@ nav ul li a {
   position:relative;
   top:10%;
 }
+.more-1 {
+  position:relative;
+  top:16%;
+}
+.o-1 {
+  position:relative;
+  top:17%;
+}
+.r-1 {
+  position:relative;
+  top:18%;
+}
+.e-1 {
+  position:relative;
+  top:19%;
+}
 .right-chevron-2 {
   position:relative;
   top:25%;
+}
+.more-2 {
+  position:relative;
+  top:28%;
+}
+.o-2 {
+  position:relative;
+  top:31%;
+}
+.r-2 {
+  position:relative;
+  top:34%;
+}
+.e-2 {
+  position:relative;
+  top:37%;
 }
 .right-chevron-3 {
   position:relative;
   top:40%;
 }
+.more-3 {
+  position:relative;
+  top:43%;
+}
+.o-3 {
+  position:relative;
+  top:46%;
+}
+.r-3 {
+  position:relative;
+  top:49%;
+}
+.e-3 {
+  position:relative;
+  top:52%;
+}
 .right-chevron-4 {
   position:relative;
   top:55%;
 }
-.right-chevron-5 {
-  position:relative;
-  top:70%;
-}
+
+
+
 /*--------------------------*/
 .active {
   text-decoration: underline;
