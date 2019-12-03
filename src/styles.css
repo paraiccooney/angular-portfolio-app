@@ -66,6 +66,14 @@ nav ul li a {
   padding-left: 2vw;
 }
 
+.download-btn {
+  border:3px solid #fffdd0;
+  padding-left:1vw!important;
+  padding-right:1vw!important;
+  margin-left:2vw!important;
+  border-radius: 20%;
+}
+
 /* More Button */
 .more-button {
   position: absolute;
