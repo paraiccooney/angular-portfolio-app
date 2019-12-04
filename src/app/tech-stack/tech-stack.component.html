@@ -160,7 +160,19 @@
                             <br><br> Angular is a popular method of developing single page applications (such as the one you are presently using) which allow for DOM elements to be destroyed & created without the need to reload/download the entire DOM tree.
                         </p>
                     </div>
-
+                    
+                    <div *ngSwitchCase="'Google Analytics'" [@enterTrigger]="'fade'">
+                        <i class="fab fa-google tech-stack-icon" [@enterTrigger]="'fade'"></i>
+                        <br><br>
+                        <p>
+                            Google Analytics is the industry standard for obtaining & processing user data.  It allows users to track a range of metrics 
+                            from simply number of site visits to more complex metrics such a device breakdown & user behaviour.  It can also be used to 
+                            define & track events of importance such as certain page visits, click-through & conversions.
+                            <br><br> I have incorportated Google Analytics into this app you are presently viewing in order to track a number of metrics 
+                            with the view to optimise this application.
+                        </p>
+                    </div>
+                    
                     <div *ngSwitchDefault [@enterTrigger]="'fade'">
                         No information found.
                     </div>

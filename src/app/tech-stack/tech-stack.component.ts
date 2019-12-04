@@ -27,6 +27,7 @@ export class TechStackComponent implements OnInit {
     {name: 'MongoDB'},
     {name: 'AWS'},
     {name: 'Angular'},
+    {name: 'Google Analytics'}
     ]
   
   displayed="HTML"
